@@ -9,11 +9,11 @@
     border-radius: 10rem;
     transition: all 0.3s;
     position: relative;
-    background-color: $color-white;
+    font-size: $default-font-size;
   }
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem $color-black;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
   }
   &:active {
     transform: translateY(-0.1rem);
@@ -45,5 +45,27 @@
   &--animated {
     animation: moveUpBtn 0.9s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+  &-text {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $color-primary;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 2px solid $color-primary;
+      padding: 3px;
+      transition: all 0.2s;
+    }
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+    }
   }
 }
