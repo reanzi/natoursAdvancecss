@@ -1,0 +1,88 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    border-radius: 50%;
+    z-index: 2000;
+  }
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 3.5rem;
+    right: 4.5rem;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    z-index: 1000;
+    transform: scale(80);
+  }
+  &__nav {
+    height: 12rem;
+    top: 0;
+    right: 0;
+  }
+  &__list {
+    @include centerY;
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    z-index: 1500;
+  }
+  &__item {
+    display: inline;
+  }
+  &__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      //   height: 12rem;
+      letter-spacing: 0.5px;
+      padding: 2rem 0.5rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 350%;
+      transition: all 0.4s;
+
+      & span {
+        display: none;
+        margin-right: 1.2rem;
+      }
+    }
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary-dark;
+      transform: translateX(0.5rem);
+    }
+  }
+}

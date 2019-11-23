@@ -468,6 +468,72 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: #fff;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    border-radius: 50%;
+    z-index: 2000; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 3.5rem;
+    right: 4.5rem;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    z-index: 1000;
+    transform: scale(80); }
+  .navigation__nav {
+    height: 12rem;
+    top: 0;
+    right: 0; }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    z-index: 1500; }
+  .navigation__item {
+    display: inline; }
+  .navigation__item:not(:last-child) {
+    margin-right: 1.5rem; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    letter-spacing: 0.5px;
+    padding: 2rem 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 350%;
+    transition: all 0.4s; }
+    .navigation__link:link span, .navigation__link:visited span {
+      display: none;
+      margin-right: 1.2rem; }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #28b485;
+    transform: translateX(0.5rem); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(../../img/hero.jpg);
