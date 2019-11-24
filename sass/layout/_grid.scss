@@ -1,15 +1,31 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
+
   &:not(:last-child) {
     // everything except the last-child
     margin-bottom: $grid-v-gutter;
+    @include respond(tab-port) {
+      margin-bottom: $grid-v-gutter-small;
+    }
+  }
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 2rem;
   }
   @include clearfix;
   [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $grid-h-gutter;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $grid-v-gutter-small;
+      }
+    }
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

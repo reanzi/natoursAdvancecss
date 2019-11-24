@@ -4,17 +4,32 @@
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo {
     width: 15rem;
     height: auto;
     &-box {
       text-align: center;
       margin-bottom: 8rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 5rem;
+      }
     }
   }
   &__nav {
     border-top: 1px solid $color-grey-dark-2;
+    padding-top: 2rem;
     display: inline-block; // does not occupy all the width of the container just the width of a content
+
+    @include respond(tab-port) {
+      padding: 8rem 0;
+      width: 100%;
+      text-align: center;
+    }
   }
   &__list {
     list-style: none;
@@ -50,5 +65,10 @@
     width: 80%;
     float: right;
     color: rgba($color-white, 0.5);
+
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+    }
   }
 }
