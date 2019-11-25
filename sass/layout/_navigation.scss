@@ -6,6 +6,10 @@
   width: 100%;
   z-index: 1000;
 
+  @include respond(phone) {
+    // height: -12rem;
+  }
+
   &__checkbox {
     display: none;
   }
@@ -22,6 +26,10 @@
     text-align: center;
     cursor: pointer;
 
+    @include respond(tab-land) {
+      top: 3.5rem;
+      right: 3.3rem;
+    }
     @include respond(tab-port) {
       top: 3.5rem;
       right: 4rem;
@@ -44,6 +52,15 @@
     );
     transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
     transform: scale(80, 2);
+    @include respond(tab-port) {
+      height: 11.3rem;
+      // top: -13.5rem;
+      top: -16.5rem;
+    }
+    @include respond(phone) {
+      height: 30rem;
+      top: -44.5rem;
+    }
   }
   &__nav {
     position: relative;
@@ -64,9 +81,26 @@
     font-size: 2rem;
     color: $color-white;
     z-index: 1500;
+
+    @include respond(tab-port) {
+      display: block;
+      top: -1rem;
+    }
+    @include respond(phone) {
+      display: block;
+      top: -5rem;
+    }
   }
   &__item {
     display: inline;
+
+    @include respond(phone) {
+      position: relative;
+      display: block;
+      text-align: left;
+      margin-left: 14rem;
+      margin-top: 0;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 1.5rem;
@@ -93,7 +127,14 @@
 
       & span {
         display: none;
-        margin-right: 1.2rem;
+        @include respond(tab-port) {
+          display: inline;
+          margin-right: 1.4rem;
+        }
+        @include respond(phone) {
+          display: inline;
+          margin-right: 1.4rem;
+        }
       }
     }
     &:hover,
