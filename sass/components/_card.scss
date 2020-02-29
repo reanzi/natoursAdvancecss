@@ -167,7 +167,8 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     //FUNCTIONALITY
     height: auto;
     border-radius: 3px;
@@ -175,8 +176,8 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__side {
-      font-size: 2rem;
-      width: 100%;
+      // font-size: 2rem;
+      // width: 100%;
       position: relative; // there no two sides occupying the same space
       height: auto;
       box-shadow: none;
